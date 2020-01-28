@@ -42,7 +42,7 @@ class FacttuClient extends AbstractClient
     {
         $content = $this->adapter
             ->post(
-                sprintf("%s/%s/%s", $this->apiUrl, self::BASE_SERVICES,"/documentos/enviar"),
+                sprintf("%s/%s/%s", $this->apiUrl, self::BASE_SERVICES,"documentos/enviar"),
                 $documento->toJSON(128)
             );
 
