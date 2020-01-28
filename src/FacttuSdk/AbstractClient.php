@@ -140,7 +140,7 @@ abstract class AbstractClient
      */
     public function setAdapter(AdapterInterface $adapter = null)
     {
-        $this->adapter = $adapter ?: new GuzzleHttpAdapter();
+        $this->adapter = $adapter ?: new FacttuHttpAdapter();
     }
 
     public function setCredentials(Credentials $credentials = null)
