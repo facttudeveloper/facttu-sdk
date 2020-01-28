@@ -1,5 +1,4 @@
 <?php
-
 namespace FacttuSdk;
 
 use FacttuSdk\AbstractClient;
