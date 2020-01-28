@@ -2,7 +2,7 @@
 namespace FacttuSdk;
 
 use FacttuSdk\Adapter\AdapterInterface;
-use FacttuSdk\Adapter\GuzzleHttpAdapter;
+use FacttuSdk\Adapter\FacttuHttpAdapter;
 use FacttuSdk\Auth\Credentials;
 
 abstract class AbstractClient
