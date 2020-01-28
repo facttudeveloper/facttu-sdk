@@ -5,13 +5,13 @@ namespace FacttuSdk\Entity;
 use FacttuSdk\Common\DocumentoSunat;
 
 /**
- * Class DocumentoSunat
+ * Class RegistroVenta
  *
  * @package FacttuSdk\Entity
  *
- * @property string $TipoDocumento
- * @property string $Serie
- * @property string $Numero
+ * @property string $tipo_documento
+ * @property string $serie
+ * @property string $numero
  * 
  */
 class RegistroVenta extends DocumentoSunat
@@ -21,16 +21,16 @@ class RegistroVenta extends DocumentoSunat
      */
     public function getTipoDocumento()
     {
-        return $this->TipoDocumento;
+        return $this->tipo_documento;
     }
 
     /**
-     * @param string $TipoDocumento
+     * @param string $tipo_documento
      * @return $this
      */
-    public function setTipoDocumento($TipoDocumento)
+    public function setTipoDocumento($tipo_documento)
     {
-        $this->TipoDocumento = $TipoDocumento;
+        $this->tipo_documento = $tipo_documento;
 
         return $this;
     }
@@ -42,16 +42,16 @@ class RegistroVenta extends DocumentoSunat
      */
     public function getSerie()
     {
-        return $this->Serie;
+        return $this->serie;
     }
 
     /**
-     * @param string $Serie
+     * @param string $serie
      * @return $this
      */
-    public function setSerie($Serie)
+    public function setSerie($serie)
     {
-        $this->Serie = $Serie;
+        $this->serie = $serie;
 
         return $this;
     }
@@ -62,16 +62,16 @@ class RegistroVenta extends DocumentoSunat
      */
     public function getNumero()
     {
-        return $this->Numero;
+        return $this->numero;
     }
 
     /**
-     * @param string $Numero
+     * @param string $numero
      * @return $this
      */
-    public function setNumero($Numero)
+    public function setNumero($numero)
     {
-        $this->Numero = $Numero;
+        $this->numero = $numero;
 
         return $this;
     }

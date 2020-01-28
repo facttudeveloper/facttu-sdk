@@ -3,6 +3,15 @@ namespace FacttuSdk\Common;
 
 use FacttuSdk\Validation\JsonValidator;
 
+
+/**
+ * Class DocumentoSunat
+ *
+ * @package FacttuSdk\Common
+ *
+ * @property string $tipo_documento_sunat
+ * 
+ */
 class DocumentoSunat
 {
 
@@ -12,16 +21,16 @@ class DocumentoSunat
      */
     public function getTipoDocumentoSunat()
     {
-        return $this->TipoDocumentoSunat;
+        return $this->tipo_documento_sunat;
     }
 
     /**
-     * @param string $TipoDocumento
+     * @param string $tipo_documento_sunat
      * @return $this
      */
-    public function setTipoDocumentoSunat($TipoDocumentoSunat)
+    public function setTipoDocumentoSunat($tipo_documento_sunat)
     {
-        $this->TipoDocumentoSunat = $TipoDocumentoSunat;
+        $this->tipo_documento_sunat = $tipo_documento_sunat;
 
         return $this;
     }

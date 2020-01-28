@@ -9,7 +9,7 @@ use FacttuSdk\Entity\RegistroVenta;
  *
  * @package FacttuSdk\Entity
  *
- * @property string $TipoOperacion
+ * @property string $tipo_operacion
  * 
  */
 class Invoice extends RegistroVenta
@@ -18,7 +18,7 @@ class Invoice extends RegistroVenta
     /**
      * @var string
      */
-    protected $TipoOperacion="0101";
+    protected $tipo_operacion="0101";
 
 
 
@@ -27,16 +27,16 @@ class Invoice extends RegistroVenta
      */
     public function getTipoOperacion()
     {
-        return $this->TipoOperacion;
+        return $this->tipo_operacion;
     }
 
     /**
-     * @param string $TipoOperacion
+     * @param string $tipo_operacion
      * @return $this
      */
-    public function setTipoOperacion($TipoOperacion)
+    public function setTipoOperacion($tipo_operacion)
     {
-        $this->TipoOperacion = $TipoOperacion;
+        $this->tipo_operacion = $tipo_operacion;
 
         return $this;
     }

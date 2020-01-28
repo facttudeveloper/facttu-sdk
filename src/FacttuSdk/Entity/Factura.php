@@ -9,9 +9,7 @@ use FacttuSdk\Common\TipoDocumentoElectronicoSunat;
 /**
  * Class Factura
  *
- * @package FacttuSdk\Entity
- *
- * @property string $TipoOperacion
+ * @package FacttuSdk\Factura
  * 
  */
 class Factura extends Invoice
