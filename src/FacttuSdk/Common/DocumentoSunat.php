@@ -37,6 +37,27 @@ class DocumentoSunat
 
 
 
+    /**
+     * @return string
+     */
+    public function getRucEmpresa()
+    {
+        return $this->ruc_empresa;
+    }
+
+    /**
+     * @param string $ruc_empresa
+     * @return $this
+     */
+    public function setRucEmpresa($ruc_empresa)
+    {
+        $this->ruc_empresa = $ruc_empresa;
+
+        return $this;
+    }
+
+
+
 
 
     private $_propMap = array();
