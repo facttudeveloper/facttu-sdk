@@ -14,5 +14,8 @@ use FacttuSdk\Validation\JsonValidator;
  */
 class FacttuResponse
 {
-	
+	public function __construct($content = "{}")
+    {
+        
+    }
 }

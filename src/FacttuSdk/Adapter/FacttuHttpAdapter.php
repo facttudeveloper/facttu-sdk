@@ -103,6 +103,21 @@ class FacttuHttpAdapter implements AdapterInterface
     public function post($url, $body = '')
     {
         try {
+
+
+            $this->response = $this->client
+                ->request(
+                    "POST",
+                    $url,
+                    [
+                        'headers' => $this->headers,
+                        'body' => $body,
+                        'http_errors' => false
+                    ]
+                )
+            ;
+
+            /*
             $this->response = $this->client
                 ->post(
                     $url,
@@ -112,11 +127,16 @@ class FacttuHttpAdapter implements AdapterInterface
                     ]
                 )
             ;
+            */
+
+
         } catch (RequestException $e) {
             $this->response = $e->getResponse();
             $this->handleError($e);
         }
-        return $this->response->getBody()->getContents();
+        //return $this->response->getBody()->getContents();
+
+        return $this->response->getBody();
     }
 
     /**
