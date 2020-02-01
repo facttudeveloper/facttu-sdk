@@ -27,7 +27,7 @@ class FacttuClient extends AbstractClient
             $apiUrl = self::BASE_URL;
         }
 
-        parent::__construct($credentials, null, null, null);
+        parent::__construct($credentials);
     }
 
     /**
