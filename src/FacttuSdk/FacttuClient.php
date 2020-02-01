@@ -21,13 +21,13 @@ class FacttuClient extends AbstractClient
      *
      * @inheritdoc
      */
-    public function __construct($apiUrl = null, AdapterInterface $adapter = null, Credentials $credentials = null, $config = array())
+    public function __construct(Credentials $credentials = null)
     {
         if(empty($apiUrl)) {
             $apiUrl = self::BASE_URL;
         }
 
-        parent::__construct($credentials, $adapter, $apiUrl, $config);
+        parent::__construct($credentials, null, null, null);
     }
 
     /**
