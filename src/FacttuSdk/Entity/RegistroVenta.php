@@ -95,7 +95,7 @@ class RegistroVenta extends DocumentoSunat
     {
         if ($fecha_emision instanceof \DateTime) {
 
-            $fecha_emision=$fecha_emision->format('Y-m-d H:i:s');
+            $fecha_emision=$fecha_emision->format('Y-m-d\TH:i:s');
         }
 
         $this->fecha_emision = $fecha_emision;
