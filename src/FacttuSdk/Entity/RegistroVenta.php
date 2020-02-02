@@ -12,7 +12,7 @@ use FacttuSdk\Common\DocumentoSunat;
  * @property string $tipo_documento
  * @property string $serie
  * @property string $numero
- * @property \DateTime $fecha_emision
+ * @property string $fecha_emision
 
  * 
  */
@@ -80,7 +80,7 @@ class RegistroVenta extends DocumentoSunat
 
 
     /**
-     * @return \DateTime
+     * @return string
      */
     public function getFechaEmision()
     {
@@ -88,11 +88,16 @@ class RegistroVenta extends DocumentoSunat
     }
 
     /**
-     * @param \DateTime $fecha_emision
+     * @param string $fecha_emision
      * @return $this
      */
     public function setFechaEmision($fecha_emision)
     {
+        if ($fecha_emision instanceof DateTime) {
+
+            $fecha_emision=$fecha_emision->format('Y-m-d H:i:s');
+        }
+
         $this->fecha_emision = $fecha_emision;
 
         return $this;
