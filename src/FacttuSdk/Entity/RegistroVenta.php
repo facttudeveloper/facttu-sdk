@@ -12,6 +12,8 @@ use FacttuSdk\Common\DocumentoSunat;
  * @property string $tipo_documento
  * @property string $serie
  * @property string $numero
+ * @property string $fecha_emision
+
  * 
  */
 class RegistroVenta extends DocumentoSunat
