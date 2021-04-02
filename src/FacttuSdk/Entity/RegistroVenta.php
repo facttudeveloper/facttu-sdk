@@ -322,4 +322,369 @@ class RegistroVenta extends DocumentoSunat
     }
 
 
+
+    /**
+     * @return Leyenda[]
+     */
+    public function getLeyendas()
+    {
+        return $this->leyendas;
+    }
+
+    /**
+     * @param Leyenda[] $leyendas
+     * @return $this
+     */
+    public function setLeyendas($leyendas)
+    {
+        $this->leyendas = $leyendas;
+        return $this;
+    }
+
+
+    /**
+     * @return Guia[]
+     */
+    public function getGuias()
+    {
+        return $this->guias;
+    }
+
+    /**
+     * @param Guia[] $guias
+     * @return $this
+     */
+    public function setGuias($guias)
+    {
+        $this->guias = $guias;
+        return $this;
+    }
+
+
+    /**
+     * @return Object[]
+     */
+    public function getDocumentosRelacionados()
+    {
+        return $this->documentos_relacionados;
+    }
+
+    /**
+     * @param Object[] $documentos_relacionados
+     * @return $this
+     */
+    public function setDocumentosRelacionados($documentos_relacionados)
+    {
+        $this->documentos_relacionados = $documentos_relacionados;
+        return $this;
+    }
+
+
+
+    /**
+     * @return float
+     */
+    public function getMontoOperacionesGratuitas()
+    {
+        return $this->monto_operaciones_gratuitas;
+    }
+
+    /**
+     * @param float $monto_operaciones_gratuitas
+     * @return $this
+     */
+    public function setMontoOperacionesGratuitas($monto_operaciones_gratuitas)
+    {
+        $this->monto_operaciones_gratuitas = $monto_operaciones_gratuitas;
+        return $this;
+    }
+
+
+    /**
+     * @return float
+     */
+    public function getSumaDescuentoGlobal()
+    {
+        return $this->suma_descuento_global;
+    }
+
+    /**
+     * @param float $suma_descuento_global
+     * @return $this
+     */
+    public function setSumaDescuentoGlobal($suma_descuento_global)
+    {
+        $this->suma_descuento_global = $suma_descuento_global;
+        return $this;
+    }
+
+
+    /**
+     * @return float
+     */
+    public function getMontoDescuentos()
+    {
+        return $this->monto_descuentos;
+    }
+
+    /**
+     * @param float $monto_descuentos
+     * @return $this
+     */
+    public function setMontoDescuentos($monto_descuentos)
+    {
+        $this->monto_descuentos = $monto_descuentos;
+        return $this;
+    }
+
+
+    /**
+     * @return Descuento[]
+     */
+    public function getDescuentos()
+    {
+        return $this->descuentos;
+    }
+
+    /**
+     * @param Descuento[] $descuentos
+     * @return $this
+     */
+    public function setDescuentos($descuentos)
+    {
+        $this->descuentos = $descuentos;
+        return $this;
+    }
+
+
+
+    /**
+     * @return DetalleVenta[]
+     */
+    public function getDetalles()
+    {
+        return $this->detalles;
+    }
+
+    /**
+     * @param DetalleVenta[] $detalles
+     * @return $this
+     */
+    public function setDetalles($detalles)
+    {
+        $this->detalles = $detalles;
+        return $this;
+    }
+
+
+
+    /**
+     * @return Cliente
+     */
+    public function getCliente()
+    {
+        return $this->cliente;
+    }
+
+    /**
+     * @param Cliente $cliente
+     * @return $this
+     */
+    public function setCliente($cliente)
+    {
+        $this->cliente = $cliente;
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getMontoTotalEnLetras()
+    {
+        return $this->monto_total_en_letras;
+    }
+
+    /**
+     * @param string $monto_total_en_letras
+     * @return $this
+     */
+    public function setMontoTotalEnLetras($monto_total_en_letras)
+    {
+        $this->monto_total_en_letras = $monto_total_en_letras;
+        return $this;
+    }
+
+
+
+    /**
+     * @return string
+     */
+    public function getRUCCliente()
+    {
+
+        $ruc="";
+
+        if(isset($this->cliente))
+        {
+            $ruc=$this->cliente->getRUC();
+        }
+
+        return $ruc;
+    }
+
+    /**
+     * @param string $ruc_cliente
+     * @return $this
+     */
+    public function setRUCCliente($ruc_cliente)
+    {
+        if(!isset($this->cliente))
+        {
+            $this->cliente = new Cliente();
+        }
+
+        $this->cliente->setRUC($ruc_cliente);
+
+        return $this;
+    }
+
+
+
+    /**
+     * @return string
+     */
+    public function getRUCCliente()
+    {
+
+        $ruc="";
+
+        if(isset($this->cliente))
+        {
+            $ruc=$this->cliente->getRUC();
+        }
+
+        return $ruc;
+    }
+
+    /**
+     * @param string $ruc_cliente
+     * @return $this
+     */
+    public function setRUCCliente($ruc_cliente)
+    {
+        if(!isset($this->cliente))
+        {
+            $this->cliente = new Cliente();
+        }
+
+        $this->cliente->setRUC($ruc_cliente);
+
+        return $this;
+    }
+
+
+
+    /**
+     * @return string
+     */
+    public function getDNICliente()
+    {
+
+        $dni="";
+
+        if(isset($this->cliente))
+        {
+            $dni=$this->cliente->getDNI();
+        }
+
+        return $dni;
+    }
+
+    /**
+     * @param string $dni_cliente
+     * @return $this
+     */
+    public function setDNICliente($dni_cliente)
+    {
+        if(!isset($this->cliente))
+        {
+            $this->cliente = new Cliente();
+        }
+
+        $this->cliente->setDNI($dni_cliente);
+
+        return $this;
+    }
+
+
+
+    /**
+     * @return string
+     */
+    public function getNombreCompletoPersona()
+    {
+
+        $nombre_completo_persona="";
+
+        if(isset($this->cliente))
+        {
+            $nombre_completo_persona=$this->cliente->getNombreCompleto();
+        }
+
+        return $nombre_completo_persona;
+    }
+
+    /**
+     * @param string $nombre_completo_persona
+     * @return $this
+     */
+    public function setNombreCompleto($nombre_completo_persona)
+    {
+        if(!isset($this->cliente))
+        {
+            $this->cliente = new Cliente();
+        }
+
+        $this->cliente->setDNI($nombre_completo_persona);
+
+        return $this;
+    }
+
+
+
+    /**
+     * @return string
+     */
+    public function getEmailCliente()
+    {
+
+        $email_cliente="";
+
+        if(isset($this->cliente))
+        {
+            $email_cliente=$this->cliente->getNombreCompleto();
+        }
+
+        return $email_cliente;
+    }
+
+    /**
+     * @param string $email_cliente
+     * @return $this
+     */
+    public function setEmailCliente($email_cliente)
+    {
+        if(!isset($this->cliente))
+        {
+            $this->cliente = new Cliente();
+        }
+
+        $this->cliente->setDNI($email_cliente);
+
+        return $this;
+    }
+
+
+
 }
