@@ -551,39 +551,6 @@ class RegistroVenta extends DocumentoSunat
 
 
 
-    /**
-     * @return string
-     */
-    public function getRUCCliente()
-    {
-
-        $ruc="";
-
-        if(isset($this->cliente))
-        {
-            $ruc=$this->cliente->getRUC();
-        }
-
-        return $ruc;
-    }
-
-    /**
-     * @param string $ruc_cliente
-     * @return $this
-     */
-    public function setRUCCliente($ruc_cliente)
-    {
-        if(!isset($this->cliente))
-        {
-            $this->cliente = new Cliente();
-        }
-
-        $this->cliente->setRUC($ruc_cliente);
-
-        return $this;
-    }
-
-
 
     /**
      * @return string
